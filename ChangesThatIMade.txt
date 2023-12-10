@@ -1,0 +1,12 @@
+Features that I added:
+    Created an animation of the letters spinning on the slot machine
+    Created the ".vscode" folder, which makes debugging so much easier now that I have GUI tools
+    Created the "constants.hpp" header file, which makes keeping track & modifing the number constants very easy
+_________________________
+
+Runtime errors that I fixed:
+    Replaced the unicode symbols with regular characters, which fixed the error where all text was a jumbled mess
+
+Other changes that I made
+    Removed the command line arguments, because they weren't even used
+    Removed the "addicon()" function, because it was completely unnessary
