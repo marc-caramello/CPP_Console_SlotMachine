@@ -8,39 +8,35 @@
 #include <string>
 #include <Windows.h>
 #include "constants.hpp"
-#include "slotmashine.hpp"
-#include "slotmashineview.hpp"
+#include "slotMachine.hpp"
 
 using namespace std;
 
 int main() {
-  srand(time(0)); 
+  srand(time(0));
   setlocale(LC_ALL, "");
   initscr();
   curs_set(0);
-  start_color();
   noecho();
   cbreak();
   clear();
   keypad(stdscr, true);
 
-  SlotMashine* slotMashine = new SlotMashine(START_COINS);
-  SlotMashineView* slotMashineView = new SlotMashineView(slotMashine);
+  SlotMachine slotMachine(START_COINS);
   bool run = true;
   int key = '?';
 
   while(run) {
-    slotMashineView->print();
+    slotMachine.printAll();
     key = getch();
 
     if(key == 'i' || key == 'I') {
-      slotMashine->insertCoin();
+      slotMachine.insertCoin();
     }
     else if(key == 's' || key == 'S') {
-      slotMashineView->spin();
-      // CALL CHECKWIN FUNCTION
+      slotMachine.spin();
     }
-    else if(key == 'q' || key == 'Q') {
+    else if(key == 'e' || key == 'E') {
       run = false;
     }
     clear();

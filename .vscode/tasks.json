@@ -3,12 +3,14 @@
         {
             "type": "cppbuild",
             "label": "Compile, Run, & Debug",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "g++",
             "args": [
                 "-std=c++23",
                 "-g",
                 "${fileDirname}\\**.cpp",
                 "${fileDirname}\\**.hpp",
+                //"${fileDirname}\\**.c",
+                //"${fileDirname}\\**.h",
                 "-o",
                 "${fileDirname}\\runThis.exe",
                 "-lncurses",
