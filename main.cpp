@@ -6,6 +6,7 @@
 #include <iostream>
 #include <pdcurses/curses.h>
 #include <string>
+#include <cwchar>
 #include <Windows.h>
 #include "constants.hpp"
 #include "slotMachine.hpp"

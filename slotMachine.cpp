@@ -49,11 +49,11 @@ void SlotMachine::spin() {
     }
     int mulitiplier = 0;
 
-    if(wheels[0] == wheels[1] || wheels[1] == wheels[2] || wheels[0] == wheels[2]) {
-      mulitiplier = 2;
+    if(wheels[0] == wheels[1] && wheels[1] == wheels[2]) {
+      mulitiplier = 4;
     }
-    else if(wheels[0] == wheels[1] && wheels[1] == wheels[2]) {
-      mulitiplier = 3;
+    else if(wheels[0] == wheels[1] || wheels[1] == wheels[2] || wheels[0] == wheels[2]) {
+      mulitiplier = 2;
     }
     int award = currentBet * mulitiplier;
     coinsLeft += award;
